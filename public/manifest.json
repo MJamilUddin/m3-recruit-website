@@ -1,0 +1,27 @@
+{
+  "name": "M3 Recruit - Workflow Automation for Recruiters",
+  "short_name": "M3 Recruit",
+  "description": "Streamline your recruitment process with AI-powered workflows connecting 300+ tools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    }
+  ]
+}

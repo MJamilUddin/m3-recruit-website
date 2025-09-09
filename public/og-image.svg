@@ -1,0 +1,27 @@
+<!-- This is a placeholder - in a real scenario, you'd create an actual PNG image -->
+<!-- For now, I'll create an SVG version that can serve as the OG image -->
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Content -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">M3 Recruit</text>
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white">Workflow Automation for Recruiters</text>
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#E0E7FF">Save 15+ hours weekly with AI-powered workflows</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#E0E7FF">Connect 300+ tools and automate your recruitment process</text>
+
+  <!-- M3 Logo -->
+  <circle cx="600" cy="450" r="40" fill="white"/>
+  <text x="600" y="465" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#3B82F6">M3</text>
+
+  <!-- Website URL -->
+  <text x="600" y="550" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#E0E7FF">m3labs.co.uk</text>
+</svg>
