@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
@@ -27,7 +28,7 @@ export default function IntegrationsPage() {
   }, [searchTerm, selectedCategory]);
 
   // Reset visible count when filters change
-  useMemo(() => {
+  useEffect(() => {
     setVisibleCount(20);
   }, [searchTerm, selectedCategory]);
 
@@ -77,9 +78,11 @@ export default function IntegrationsPage() {
                 <div key={crm.id} className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gray-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <img
+                      <Image
                         src={crm.logoUrl}
                         alt={crm.name}
+                        width={24}
+                        height={24}
                         className="w-6 h-6 object-contain"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
@@ -174,9 +177,11 @@ export default function IntegrationsPage() {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 bg-gray-50 rounded-md flex items-center justify-center p-1 group-hover:bg-blue-50 transition-colors">
-                    <img
+                    <Image
                       src={integration.logoUrl}
                       alt={integration.name}
+                      width={32}
+                      height={32}
                       className="w-full h-full object-contain"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

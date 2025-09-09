@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect } from 'react';
+import Image from 'next/image';
 import {
   ReactFlow,
   MiniMap,
@@ -25,7 +26,14 @@ import { FaTrash } from 'react-icons/fa';
 import { IntegrationTool } from '../../data/integrationTools';
 
 // Custom node component for workflow tools
-const WorkflowNode = ({ data, id, onDelete }: { data: any; id: string; onDelete?: (nodeId: string) => void }) => {
+interface WorkflowNodeData {
+  name: string;
+  description: string;
+  category: string;
+  logoUrl: string;
+}
+
+const WorkflowNode = ({ data, id, onDelete }: { data: WorkflowNodeData; id: string; onDelete?: (nodeId: string) => void }) => {
   const handleDelete = (e: React.MouseEvent) => {
     e.stopPropagation();
     onDelete?.(id);
@@ -77,9 +85,11 @@ const WorkflowNode = ({ data, id, onDelete }: { data: any; id: string; onDelete?
       <div className="flex flex-col space-y-3">
         <div className="flex items-start space-x-3">
           <div className="w-10 h-10 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center flex-shrink-0">
-            <img
+            <Image
               src={data.logoUrl}
               alt={`${data.name} logo`}
+              width={28}
+              height={28}
               className="w-7 h-7 object-contain"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
@@ -136,7 +146,7 @@ export const WorkflowDiagram: React.FC<WorkflowDiagramProps> = ({ selectedTool, 
   }, [setNodes, setEdges]);
 
   // Define node types with delete functionality
-  const WorkflowNodeWithDelete = (props: any) => (
+  const WorkflowNodeWithDelete = (props: { data: WorkflowNodeData; id: string }) => (
     <WorkflowNode {...props} onDelete={deleteNode} />
   );
 

@@ -40,7 +40,7 @@ export function InteractiveWorkflowSection() {
               <h2 className="text-3xl font-bold text-slate-200">Build Your Own Workflow</h2>
             </div>
             <p className="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">
-              Tell us your current recruitment workflow and we'll build it for you. Browse our 300+ integrations,
+              Tell us your current recruitment workflow and we&apos;ll build it for you. Browse our 300+ integrations,
               drag and drop to design your process, and let us handle all the complex setup and automation.
             </p>
           </div>

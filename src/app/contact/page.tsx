@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Calendar, Send, CheckCircle, Zap } from "lucide-react";
+import { Mail, Calendar, Send, CheckCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -69,7 +68,7 @@ export default function ContactPage() {
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-gray-900 mb-2">Get in Touch</CardTitle>
                 <CardDescription className="text-lg">
-                  Have questions about M3 Recruit? We'd love to hear from you.
+                  Have questions about M3 Recruit? We&apos;d love to hear from you.
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
@@ -180,7 +179,7 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-blue-600" />
                     <span className="font-medium text-gray-900">Email Us</span>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">Send us an email and we'll get back to you within 24 hours.</p>
+                  <p className="text-sm text-gray-600 mb-3">Send us an email and we&apos;ll get back to you within 24 hours.</p>
                   <a
                     href="mailto:info@m3labs.co.uk"
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm"

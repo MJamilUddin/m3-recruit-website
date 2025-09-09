@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import Image from 'next/image';
 import { IntegrationTool, integrationTools } from '../../data/integrationTools';
 
 interface IntegrationSearchProps {
@@ -96,9 +97,11 @@ export const IntegrationSearch: React.FC<IntegrationSearchProps> = ({
             <span className="flex items-center gap-3">
               {selectedCrm ? (
                 <>
-                  <img
+                  <Image
                     src={selectedCrm.logoUrl}
                     alt={selectedCrm.name}
+                    width={20}
+                    height={20}
                     className="w-5 h-5 object-contain"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -135,9 +138,11 @@ export const IntegrationSearch: React.FC<IntegrationSearchProps> = ({
                   >
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 rounded-md overflow-hidden bg-gray-50 flex items-center justify-center flex-shrink-0">
-                        <img
+                        <Image
                           src={crm.logoUrl}
                           alt={`${crm.name} logo`}
+                          width={24}
+                          height={24}
                           className="w-6 h-6 object-contain"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
@@ -200,9 +205,11 @@ export const IntegrationSearch: React.FC<IntegrationSearchProps> = ({
                 >
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 rounded-md overflow-hidden bg-gray-50 flex items-center justify-center flex-shrink-0">
-                      <img
+                      <Image
                         src={tool.logoUrl}
                         alt={`${tool.name} logo`}
+                        width={24}
+                        height={24}
                         className="w-6 h-6 object-contain"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
@@ -258,7 +265,7 @@ export const IntegrationSearch: React.FC<IntegrationSearchProps> = ({
         {searchTerm && !isDropdownOpen && filteredTools.length === 0 && (
           <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-xl z-50 mt-1 p-4 text-center" style={{ width: 'calc(100% + 32px)', marginLeft: '-16px' }}>
             <p className="text-sm text-gray-500">
-              No tools found matching "{searchTerm}"
+              No tools found matching &quot;{searchTerm}&quot;
             </p>
           </div>
         )}
