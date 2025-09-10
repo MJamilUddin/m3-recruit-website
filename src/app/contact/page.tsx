@@ -31,17 +31,33 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const data = await response.json();
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }, 3000);
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', company: '', message: '' });
+        }, 3000);
+      } else {
+        alert(data.error || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,7 +71,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have questions about M3 Recruit? We're here to help. Send us a message and we'll get back to you soon.
+            Have questions about M3 Recruit? We&apos;re here to help. Send us a message and we&apos;ll get back to you soon.
           </p>
         </div>
       </section>
@@ -77,7 +93,7 @@ export default function ContactPage() {
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
                     <p className="text-gray-600">
-                      Thank you for contacting us. We'll get back to you within 24 hours.
+                      Thank you for contacting us. We&apos;ll get back to you within 24 hours.
                     </p>
                   </div>
                 ) : (
@@ -199,7 +215,7 @@ export default function ContactPage() {
                     variant="outline"
                     size="sm"
                     className="text-green-600 border-green-600 hover:bg-green-50"
-                    onClick={() => window.open('https://calendly.com/m3recruit', '_blank')}
+                    onClick={() => window.open('https://calendly.com/jamiluddin-eng/30min', '_blank')}
                   >
                     <Calendar className="w-4 h-4 mr-2" />
                     Schedule Call

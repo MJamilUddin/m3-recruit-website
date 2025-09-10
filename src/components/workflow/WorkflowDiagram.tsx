@@ -126,8 +126,20 @@ const WorkflowNode = ({ data, id, onDelete }: { data: WorkflowNodeData; id: stri
 // Define node types - will be created dynamically
 let nodeTypes: NodeTypes = {};
 
-// Start with empty workflow
-const initialNodes: Node[] = [];
+// Default starting node - LinkedIn (universal tool for recruitment)
+const initialNodes: Node[] = [
+  {
+    id: 'default-linkedin',
+    type: 'workflowNode',
+    position: { x: 300, y: 150 }, // Center position
+    data: {
+      name: 'LinkedIn',
+      description: 'Professional networking and job platform - Start your recruitment workflow here',
+      category: 'Job Boards',
+      logoUrl: 'https://logo.clearbit.com/linkedin.com'
+    },
+  },
+];
 const initialEdges: Edge[] = [];
 
 interface WorkflowDiagramProps {
@@ -188,7 +200,8 @@ export const WorkflowDiagram: React.FC<WorkflowDiagramProps> = ({ selectedTool, 
   );
 
   const clearWorkflow = useCallback(() => {
-    setNodes([]);
+    // Clear all nodes except the default LinkedIn node
+    setNodes((nds) => nds.filter(node => node.id === 'default-linkedin'));
     setEdges([]);
   }, [setNodes, setEdges]);
 
@@ -202,6 +215,10 @@ export const WorkflowDiagram: React.FC<WorkflowDiagramProps> = ({ selectedTool, 
         onConnect={onConnect}
         nodeTypes={nodeTypes}
         fitView
+        fitViewOptions={{
+          padding: 0.2,
+          maxZoom: 0.8
+        }}
         attributionPosition="bottom-left"
         snapToGrid={false}
         snapGrid={[15, 15]}
@@ -227,10 +244,10 @@ export const WorkflowDiagram: React.FC<WorkflowDiagramProps> = ({ selectedTool, 
           <button
             className="px-3 py-2 text-sm font-medium text-red-600 bg-white border border-red-200 rounded-lg hover:bg-red-50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 shadow-sm transition-colors duration-200"
             onClick={clearWorkflow}
-            disabled={nodes.length === 0}
+            disabled={nodes.length <= 1} // Disabled when only default node or empty
           >
             <FaTrash className="w-4 h-4" />
-            <span>Clear Workflow</span>
+            <span>Clear Added Tools</span>
           </button>
         </Panel>
       </ReactFlow>

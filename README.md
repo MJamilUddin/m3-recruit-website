@@ -1,6 +1,6 @@
-# M3 Recruit - Landing Page
+# M3 Labs - Landing Page
 
-A modern landing page for M3 Recruit, inspired by n8n.io, built with Next.js, Tailwind CSS, and ShadCN UI components.
+A modern landing page for M3 Labs featuring M3 Recruit, inspired by n8n.io, built with Next.js, Tailwind CSS, and ShadCN UI components.
 
 ## Tech Stack
 
@@ -68,6 +68,26 @@ src/
 - ⚡ Built with performance in mind
 - 🧩 Modular component architecture
 - 🎯 TypeScript for type safety
+
+## Email Setup
+
+The contact form uses Resend for sending emails with your verified domain.
+
+### Current Configuration ✅
+- **API Key**: ✅ Configured in `.env.local`
+- **Domain**: ✅ `m3labs.co.uk` verified
+- **Recipient**: `info@m3labs.co.uk` (your business email)
+- **Sender**: `noreply@m3labs.co.uk` (professional sender)
+
+### Features
+- **✅ Domain Verification**: Using your verified `m3labs.co.uk` domain
+- **✅ Professional Emails**: Branded HTML templates
+- **✅ Business Email**: Sends to `info@m3labs.co.uk`
+- **✅ Form Validation**: Required fields and email format validation
+- **✅ Error Handling**: Proper user feedback
+
+### Testing
+The contact form is production-ready! Submit a form at `/contact` and receive professional emails at your business address.
 
 ## Development
 

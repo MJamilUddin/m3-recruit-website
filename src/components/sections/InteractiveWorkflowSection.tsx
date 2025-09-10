@@ -22,7 +22,7 @@ export function InteractiveWorkflowSection() {
   };
 
   return (
-    <div className="w-full flex justify-center py-20">
+    <div id="build-workflows" className="w-full flex justify-center py-20">
       <section className="w-full max-w-6xl mx-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900/90 relative overflow-hidden rounded-3xl">
         {/* Dotted background */}
         <div className="absolute inset-0" style={{

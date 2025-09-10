@@ -8,9 +8,17 @@ export function HeroSection() {
     <section className="pt-12 pb-8 lg:pt-16 lg:pb-16">
       <div className="container max-w-screen-xl px-4 mx-auto">
         <div className="mx-auto max-w-3xl text-center">
-          <Badge className="mb-4 bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-purple-200">
-            🚀 Now in Beta
-          </Badge>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center gap-3 text-blue-600">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-sm">M3</span>
+              </div>
+              <span className="text-xl font-bold">Recruit</span>
+            </div>
+            <Badge className="bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-purple-200">
+              🚀 Now in Beta
+            </Badge>
+          </div>
           <h1 className="text-4xl font-bold tracking-tight lg:text-6xl mb-6">
             Automate Your
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Recruitment</span> Workflows

@@ -9,7 +9,7 @@ export function Footer() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">M3</span>
             </div>
-            <span className="text-xl font-bold">Recruit</span>
+            <span className="text-xl font-bold">Labs</span>
           </div>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <Link href="/contact" className="hover:text-primary transition-colors">

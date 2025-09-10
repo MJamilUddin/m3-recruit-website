@@ -758,9 +758,17 @@ export function WorkflowExamplesSection() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-white text-sm font-medium bg-purple-600 rounded-lg px-4 py-2 inline-block">
-              Build your own workflows below
-            </p>
+            <button
+              onClick={() => {
+                const element = document.getElementById('build-workflows');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+              className="text-white text-sm font-medium bg-purple-600 hover:bg-purple-700 rounded-lg px-4 py-2 inline-block transition-colors duration-200 cursor-pointer hover:shadow-lg"
+            >
+              Build your own workflows →
+            </button>
           </div>
         </div>
       </section>

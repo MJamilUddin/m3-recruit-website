@@ -106,9 +106,9 @@ export default function IntegrationsPage() {
             <p className="text-gray-600 text-sm mb-4">
               Plus integration support for BambooHR, UKG, SAP SuccessFactors, and many more...
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-sm">
-              <CheckCircle className="w-4 h-4" />
-              <span className="font-medium text-sm">All Major ATS & CRM Platforms Supported</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full">
+              <CheckCircle className="w-4 h-4 text-blue-600" />
+              <span className="font-medium text-sm text-blue-800">All Major ATS & CRM Platforms Supported</span>
             </div>
           </div>
         </div>
