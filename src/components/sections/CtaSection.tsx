@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { AnimatedButton } from "@/components/ScrollAnimations";
 
 export function CtaSection() {
   return (
@@ -15,15 +16,15 @@ export function CtaSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="text-lg px-8 bg-purple-600 hover:bg-purple-700">
+              <AnimatedButton className="h-10 px-6 text-base bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg">
                 Start Your Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </AnimatedButton>
             </Link>
             <Link href="/contact">
-              <Button variant="outline" size="lg" className="text-lg px-8 border-purple-300 text-purple-600 hover:bg-purple-50">
+              <AnimatedButton className="h-10 px-6 text-base border border-primary text-primary hover:bg-primary/5 rounded-lg">
                 Contact Sales
-              </Button>
+              </AnimatedButton>
             </Link>
           </div>
         </div>

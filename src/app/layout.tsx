@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "M3 Recruit - Workflow Automation for Recruiters",
-  description: "Streamline your recruitment process with M3 Recruit's powerful workflow automation platform. Save 15+ hours weekly with AI-powered workflows connecting 300+ tools.",
-  keywords: ["recruitment", "workflow automation", "ATS", "HR tech", "recruitment software", "candidate management", "workflow builder"],
+  title: "M3 Labs - AI-Powered Recruitment Platform",
+  description: "Transform your recruitment process with M3 Labs' intelligent workflow automation. Save 15+ hours weekly with AI-powered workflows connecting 300+ tools and platforms.",
+  keywords: ["recruitment", "workflow automation", "ATS", "HR tech", "recruitment software", "candidate management", "workflow builder", "AI recruitment", "HR automation"],
   authors: [{ name: "M3 Labs" }],
   creator: "M3 Labs",
   publisher: "M3 Labs",
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "M3 Recruit - Workflow Automation for Recruiters",
-    description: "Save 15+ hours weekly with AI-powered workflows. Connect 300+ tools and automate your entire recruitment process from sourcing to onboarding.",
+    title: "M3 Labs - AI-Powered Recruitment Platform",
+    description: "Transform your recruitment process with intelligent workflow automation. Save 15+ hours weekly with AI-powered workflows connecting 300+ tools and platforms.",
     url: "https://m3labs.co.uk",
-    siteName: "M3 Recruit",
+    siteName: "M3 Labs",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "M3 Recruit - Workflow Automation Platform",
+        alt: "M3 Labs - AI-Powered Recruitment Platform",
       },
     ],
     locale: "en_US",
@@ -46,11 +46,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "M3 Recruit - Workflow Automation for Recruiters",
-    description: "Save 15+ hours weekly with AI-powered workflows. Connect 300+ tools and automate your entire recruitment process.",
+    title: "M3 Labs - AI-Powered Recruitment Platform",
+    description: "Transform your recruitment process with intelligent workflow automation. Save 15+ hours weekly with AI-powered workflows.",
     images: ["/og-image.svg"], // Same image as Open Graph
-    creator: "@m3recruit", // Replace with your actual Twitter handle
-    site: "@m3recruit", // Replace with your actual Twitter handle
+    creator: "@m3labs", // Replace with your actual Twitter handle
+    site: "@m3labs", // Replace with your actual Twitter handle
   },
   robots: {
     index: true,
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg?v=4',
   },
   manifest: '/manifest.json', // Optional: for PWA support
-  themeColor: '#3B82F6', // Primary blue from M3 brand
+  themeColor: '#6B21A8', // Primary purple from M3 Labs brand
   colorScheme: 'light',
   viewport: 'width=device-width, initial-scale=1',
 };
@@ -94,9 +94,9 @@ export default function RootLayout({
         <meta name="twitter:image:height" content="630" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="M3 Recruit" />
+        <meta name="apple-mobile-web-app-title" content="M3 Labs" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#3B82F6" />
+        <meta name="msapplication-TileColor" content="#6B21A8" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

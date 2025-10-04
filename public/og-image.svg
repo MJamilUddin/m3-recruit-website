@@ -4,8 +4,8 @@
   <!-- Background gradient -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3B82F6"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
+      <stop offset="0%" stop-color="#6B21A8"/>
+      <stop offset="100%" stop-color="#3730A3"/>
     </linearGradient>
   </defs>
 
@@ -13,14 +13,14 @@
   <rect width="1200" height="630" fill="url(#bgGradient)"/>
 
   <!-- Content -->
-  <text x="600" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">M3 Recruit</text>
-  <text x="600" y="260" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white">Workflow Automation for Recruiters</text>
-  <text x="600" y="320" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#E0E7FF">Save 15+ hours weekly with AI-powered workflows</text>
-  <text x="600" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#E0E7FF">Connect 300+ tools and automate your recruitment process</text>
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="white">M3 Labs</text>
+  <text x="600" y="260" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white">AI-Powered Recruitment Platform</text>
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#E0E7FF">Save 15+ hours weekly with intelligent workflow automation</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#E0E7FF">Connect 300+ tools and automate your entire recruitment process</text>
 
   <!-- M3 Logo -->
   <circle cx="600" cy="450" r="40" fill="white"/>
-  <text x="600" y="465" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#3B82F6">M3</text>
+  <text x="600" y="465" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#6B21A8">M3</text>
 
   <!-- Website URL -->
   <text x="600" y="550" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#E0E7FF">m3labs.co.uk</text>

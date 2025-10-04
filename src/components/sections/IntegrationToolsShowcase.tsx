@@ -41,7 +41,7 @@ const businessTools: LogoItem[] = [
 
 function LogoItem({ item }: { item: LogoItem }) {
   return (
-    <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-gray-200 flex items-center justify-center p-2 group hover:shadow-md transition-shadow duration-200">
+    <div className="w-14 h-14 bg-white/80 backdrop-blur-sm rounded-lg border border-slate-200/60 flex items-center justify-center p-2.5 group hover:shadow-sm transition-all duration-200">
       <Image
         src={`https://logo.clearbit.com/${item.domain}`}
         alt={item.name}
@@ -64,13 +64,13 @@ function LogoItem({ item }: { item: LogoItem }) {
 function LogoRow({ logos, animationClass }: { logos: LogoItem[]; animationClass: string }) {
   return (
     <div className={`flex ${animationClass}`}>
-      <div className="flex space-x-6 items-center shrink-0 min-w-max">
+      <div className="flex space-x-8 items-center shrink-0 min-w-max px-4">
         {logos.map((logo) => (
           <LogoItem key={logo.domain} item={logo} />
         ))}
       </div>
       {/* Duplicate set for seamless scrolling */}
-      <div className="flex space-x-6 items-center shrink-0 min-w-max">
+      <div className="flex space-x-8 items-center shrink-0 min-w-max px-4">
         {logos.map((logo) => (
           <LogoItem key={`${logo.domain}-duplicate`} item={logo} />
         ))}
@@ -81,14 +81,16 @@ function LogoRow({ logos, animationClass }: { logos: LogoItem[]; animationClass:
 
 export function IntegrationToolsShowcase() {
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-white">
+    <section className="py-16">
       <div className="container max-w-6xl px-4 mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Plug AI into your own data &
-            <span className="text-purple-600 block">over 300 integrations</span>
+          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-slate-100 border border-slate-200">
+            <span className="text-sm font-medium text-slate-600">300+ Integrations</span>
+          </div>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+            Plug AI into your own data
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             Connect with your favorite tools and platforms. Our AI seamlessly integrates with your existing workflow.
           </p>
         </div>
@@ -110,10 +112,10 @@ export function IntegrationToolsShowcase() {
         <div className="mt-12 text-center">
           <a
             href="/integrations"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-white hover:bg-slate-50 text-slate-900 font-medium rounded-lg transition-colors duration-200 border border-slate-200 shadow-sm hover:shadow"
           >
             Browse all integrations
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </a>

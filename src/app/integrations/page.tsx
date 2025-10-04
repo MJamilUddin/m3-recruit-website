@@ -59,13 +59,16 @@ export default function IntegrationsPage() {
       </div>
 
       {/* CRM/ATS Systems Section */}
-      <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-12 bg-slate-50/50">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="inline-flex items-center justify-center px-4 py-1.5 mb-4 rounded-full bg-white border border-slate-200">
+              <span className="text-sm font-medium text-slate-600">Major Platforms</span>
+            </div>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">
               Supported CRM & ATS Systems
             </h2>
-            <p className="text-gray-600 text-sm max-w-2xl mx-auto">
+            <p className="text-slate-600 text-sm max-w-2xl mx-auto">
               Seamlessly integrate with the most popular recruitment platforms
             </p>
           </div>
@@ -106,9 +109,9 @@ export default function IntegrationsPage() {
             <p className="text-gray-600 text-sm mb-4">
               Plus integration support for BambooHR, UKG, SAP SuccessFactors, and many more...
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full">
-              <CheckCircle className="w-4 h-4 text-blue-600" />
-              <span className="font-medium text-sm text-blue-800">All Major ATS & CRM Platforms Supported</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-full">
+              <CheckCircle className="w-4 h-4 text-slate-600" />
+              <span className="font-medium text-sm text-slate-700">All Major ATS & CRM Platforms Supported</span>
             </div>
           </div>
         </div>
@@ -128,7 +131,7 @@ export default function IntegrationsPage() {
                 placeholder="Search integrations..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 bg-white border border-gray-200 rounded-lg hover:border-gray-300 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400/20 transition-all duration-200 text-sm"
+                className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-lg hover:border-slate-300 focus:border-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-400/20 transition-all duration-200 text-sm"
               />
             </div>
 
@@ -137,7 +140,7 @@ export default function IntegrationsPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="appearance-none bg-white border border-gray-200 rounded-lg px-3 py-2 pr-8 hover:border-gray-300 focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400/20 transition-all duration-200 text-sm min-w-[180px]"
+                className="appearance-none bg-white border border-slate-200 rounded-lg px-3 py-2 pr-8 hover:border-slate-300 focus:border-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-400/20 transition-all duration-200 text-sm min-w-[180px]"
               >
                 <option value="All">All Categories ({integrationTools.length})</option>
                 {categories.map(category => {
@@ -173,10 +176,10 @@ export default function IntegrationsPage() {
             {visibleIntegrations.map((integration) => (
               <div
                 key={integration.id}
-                className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all duration-200 hover:border-blue-200 group"
+                className="bg-white rounded-lg border border-slate-200 p-4 hover:shadow-md transition-all duration-200 hover:border-slate-300 group"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 bg-gray-50 rounded-md flex items-center justify-center p-1 group-hover:bg-blue-50 transition-colors">
+                  <div className="w-8 h-8 bg-slate-50 rounded-md flex items-center justify-center p-1 group-hover:bg-slate-100 transition-colors">
                     <Image
                       src={integration.logoUrl}
                       alt={integration.name}
@@ -195,7 +198,7 @@ export default function IntegrationsPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-medium text-gray-900 text-sm truncate">{integration.name}</h3>
-                    <span className="inline-block px-1.5 py-0.5 bg-blue-100 text-blue-700 text-xs font-medium rounded">
+                    <span className="inline-block px-1.5 py-0.5 bg-slate-100 text-slate-700 text-xs font-medium rounded">
                       {integration.category}
                     </span>
                   </div>
@@ -221,7 +224,7 @@ export default function IntegrationsPage() {
                 setSearchTerm('');
                 setSelectedCategory('All');
               }}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm"
+              className="bg-white hover:bg-slate-50 text-slate-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200 text-sm border border-slate-200 shadow-sm hover:shadow"
             >
               Clear Filters
             </button>
@@ -233,7 +236,7 @@ export default function IntegrationsPage() {
           <div className="text-center mt-8">
             <button
               onClick={loadMore}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 text-sm shadow-md hover:shadow-lg"
+              className="bg-white hover:bg-slate-50 text-slate-900 font-medium py-3 px-8 rounded-lg transition-colors duration-200 text-sm border border-slate-200 shadow-sm hover:shadow"
             >
               Load More Integrations ({filteredIntegrations.length - visibleCount} remaining)
             </button>
@@ -253,28 +256,28 @@ export default function IntegrationsPage() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="text-2xl font-bold text-slate-900 mb-1">
                     {categories.length}+
                   </div>
-                  <div className="text-sm text-gray-600">Categories</div>
+                  <div className="text-sm text-slate-600">Categories</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="text-2xl font-bold text-slate-900 mb-1">
                     {filteredIntegrations.filter(t => t.category === 'CRM').length + 10}+
                   </div>
-                  <div className="text-sm text-gray-600">ATS Systems</div>
+                  <div className="text-sm text-slate-600">ATS Systems</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="text-2xl font-bold text-slate-900 mb-1">
                     {filteredIntegrations.filter(t => t.category === 'HRIS').length +6}+
                   </div>
-                  <div className="text-sm text-gray-600">HR Systems</div>
+                  <div className="text-sm text-slate-600">HR Systems</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
+                  <div className="text-2xl font-bold text-slate-900 mb-1">
                     {filteredIntegrations.filter(t => t.category.includes('Communication')).length}+
                   </div>
-                  <div className="text-sm text-gray-600">Communication Tools</div>
+                  <div className="text-sm text-slate-600">Communication Tools</div>
                 </div>
               </div>
             </div>

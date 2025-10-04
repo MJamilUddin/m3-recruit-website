@@ -54,7 +54,7 @@ export default function PricingPage() {
     {
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
-      icon: <Building className="w-8 h-8 text-purple-600" />,
+      icon: <Building className="w-8 h-8 text-purple-800" />,
       price: 'Custom',
       period: '',
       features: [
@@ -123,7 +123,7 @@ export default function PricingPage() {
       <section className="pb-20 px-4">
         <div className="container max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan) => (
               <div
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg border transition-all duration-300 hover:shadow-xl ${
@@ -163,7 +163,7 @@ export default function PricingPage() {
 
                   <Link href="/contact" className="block">
                     <Button
-                      className={`w-full mb-8 ${plan.popular ? '' : plan.name === 'Enterprise' ? 'bg-purple-600 text-white' : ''}`}
+                      className={`w-full mb-8 ${plan.popular ? '' : plan.name === 'Enterprise' ? 'bg-purple-800 text-white' : ''}`}
                       variant={plan.buttonVariant}
                       size="lg"
                     >

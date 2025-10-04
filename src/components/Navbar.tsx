@@ -15,21 +15,24 @@ export function Navbar() {
   };
 
   return (
-    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 max-w-screen-xl items-center justify-between px-4 mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity" onClick={closeMobileMenu}>
-          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-800 to-blue-700 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">M3</span>
           </div>
-          <span className="text-xl font-bold">Labs</span>
+          <span className="text-xl font-bold text-slate-900">Labs</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/features" className="text-sm font-medium hover:text-primary transition-colors">
             Features
-          </a>
+          </Link>
+          <Link href="/how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+            How It Works
+          </Link>
           <Link href="/integrations" className="text-sm font-medium hover:text-primary transition-colors">
             Integrations
           </Link>
@@ -45,7 +48,7 @@ export function Navbar() {
             </button>
           </Link>
           <Link href="/contact">
-            <button className="text-sm font-medium bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">
+            <button className="text-sm font-medium bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg transition-colors">
               Get Started
             </button>
           </Link>
@@ -64,16 +67,23 @@ export function Navbar() {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className={`md:hidden bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+      <div className={`md:hidden bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-t transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="container max-w-screen-xl px-4 mx-auto py-4">
           <div className="flex flex-col space-y-4">
-            <a
-              href="#features"
+            <Link
+              href="/features"
               className="text-sm font-medium hover:text-primary transition-colors py-2"
               onClick={closeMobileMenu}
             >
               Features
-            </a>
+            </Link>
+            <Link
+              href="/how-it-works"
+              className="text-sm font-medium hover:text-primary transition-colors py-2"
+              onClick={closeMobileMenu}
+            >
+              How It Works
+            </Link>
             <Link
               href="/integrations"
               className="text-sm font-medium hover:text-primary transition-colors py-2"
@@ -104,7 +114,7 @@ export function Navbar() {
                 </button>
               </Link>
               <Link href="/contact" onClick={closeMobileMenu}>
-                <button className="w-full text-sm font-medium bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-lg transition-colors">
+                <button className="w-full text-sm font-medium bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-3 rounded-lg transition-colors">
                   Get Started
                 </button>
               </Link>

@@ -248,7 +248,7 @@ export const IntegrationSearch: React.FC<IntegrationSearchProps> = ({
             {visibleCount < filteredTools.length && (
               <div className="p-3 text-center border-t border-gray-100 bg-gray-25 rounded-b-lg">
                 <button
-                  className="px-4 py-2 text-xs font-medium text-purple-600 bg-white border border-purple-200 rounded-lg hover:bg-purple-50 hover:border-purple-300 transition-colors duration-200"
+                  className="px-4 py-2 text-xs font-medium text-purple-800 bg-white border border-purple-300 rounded-lg hover:bg-purple-50 hover:border-purple-400 transition-colors duration-200"
                   onClick={(e) => {
                     e.stopPropagation();
                     loadMore();
